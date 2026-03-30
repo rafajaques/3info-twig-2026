@@ -1,0 +1,18 @@
+{# jogos_excluir.html - isto é um comentário #}
+{% extends "_base.html" %}
+
+{% block conteudo %}
+<h2>Excluir jogo</h2>
+<h3>Você está excluindo o jogo {{ jogo.nome }}</h3>
+<img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjRtcHJlZmU5YXBhcmI4cWpxNG9tbDY0dm5jeW42M3J6cG1uc2J2cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/du9tUy0lntYsqGF2Ye/giphy.gif" width="250">
+<br>
+Você tem certeza que deseja fazer isso? Esta operação não pode ser desfeita. Pense em sua família antes de confirmar.
+<div>
+    <form action="jogos_excluir.php" method="post">
+        <input type="hidden" name="id" value="{{ jogo.id }}">
+        <input type="submit" value="❌ Apagar para sempre e
+        nunca mais olhar para trás" style="background-color: red;padding:5px;font-size:26px;color:white">
+    </form>
+    <a href="jogos.php">😨 Não! Eu me arrependi. Não apague!</a>
+</div>
+{% endblock %}
