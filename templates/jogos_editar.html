@@ -9,6 +9,8 @@
 {% endif %}
 
 <form action="jogos_editar.php" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="{{ jogo.id }}">
+
     <input type="text" name="nome" placeholder="Nome" value="{{ jogo.nome }}">
     <br>
     Estilo: <select name="estilo">
