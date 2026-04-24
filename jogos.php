@@ -3,7 +3,7 @@
 require('carregar_twig.php');
 require('carregar_pdo.php');
 echo date('d/m/Y H:i:s');die;
-phpinfo();die;
+
 use Carbon\Carbon;
 
 $jogos = $pdo->query('SELECT * FROM jogos');
